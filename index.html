@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiBet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000000;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            font-family: Roboto, sans-serif;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        h1 {
+            font-family: Poppins, sans-serif;
+            color: #5bff00;
+            margin: 0;
+        }
+
+        .valid-message {
+            font-size: 2rem;
+            color: #ffffff;
+            margin-top: 15px;
+            font-family: Montserrat, sans-serif;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .button-tKrbSK2222480-element {
+            background: #0fbe0f;
+            border-radius: 16px;
+            border: none;
+            color: #ffffff;
+            padding: 20px 40px; /* Aumenta o padding do botão */
+            font-weight: 600;
+            display: block;
+            width: fit-content;
+            text-align: center;
+            margin: 3vh auto 1.5vh auto; /* Ajusta as margens */
+            font-size: 1.5rem; /* Aumenta o tamanho da fonte do botão */
+            box-sizing: border-box;
+            text-decoration: none;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .button-tKrbSK2222480-element:hover {
+            filter: brightness(1.2);
+        }
+
+        @media (max-width: 1200px) {
+            .button-tKrbSK2222480-element {
+                font-size: 1.3rem; /* Ajusta o tamanho da fonte do botão */
+                margin: 2.5vh auto 1.5vh auto;
+                padding: 16px 32px; /* Ajusta o padding */
+            }
+        }
+
+        @media (max-width: 640px) {
+            .button-tKrbSK2222480-element {
+                font-size: 5vw; /* Ajusta o tamanho da fonte do botão */
+                padding: 16px 32px; /* Ajusta o padding */
+                margin: 2vh auto 1vh auto; /* Ajusta as margens */
+            }
+
+            .valid-message {
+                font-size: 1.5rem; /* Ajusta o tamanho da fonte */
+            }
+
+            h1 {
+                font-size: 10vw; /* Ajusta o tamanho da fonte */
+            }
+        }
+
+        .zooming {
+            animation: zooming 1.25s ease infinite;
+        }
+
+        @keyframes zooming {
+            0% { transform: scale(1, 1); }
+            50% { transform: scale(1.1, 1.1); }
+            100% { transform: scale(1, 1); }
+        }
+
+        .headline {
+            margin: 3vh 0;
+            background-color: #000000;
+        }
+
+        .headline h1 {
+            text-align: center;
+            color: #5bff00;
+            line-height: 1.1;
+        }
+
+        @media (max-width: 1200px) {
+            .headline h1 {
+                padding-bottom: 1vh;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .headline h1 {
+                font-size: 5vw;
+                padding-bottom: 1vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="headline">
+        <h1><b>PARABÉNS!</b></h1>
+    </div>
+
+    <div class="headline">
+        <h1><b>&nbsp;<span style="color:#ffffff">SEU PRÊMIO FOI</span>&nbsp;LIBERADO!&nbsp;</b></h1>
+    </div>
+
+    <div>
+        <a href="https://chat.whatsapp.com/H8gfo2fnyC0DxehBpjIzIi" target="_self" class="button-tKrbSK2222480-element zooming">
+            RESGATAR COM A KEY
+        </a>
+    </div>
+
+    <div class="headline">
+        <div id="valid-message" class="valid-message"></div>
+        <br><h1 style="color: red;">Últimas 3 vagas...</h1>
+        <img src="./images/logo350px-300x296.webp" alt="" style="max-width: 100%; height: auto;">
+    </div>
+
+    <script>
+        function mostrarMensagemValida() {
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0'); // Janeiro é 0!
+            const ano = hoje.getFullYear();
+            
+            const dataAtual = `${dia}/${mes}/${ano}`;
+            const mensagem = `Válido até ${dataAtual}`;
+            
+            document.getElementById('valid-message').innerText = mensagem;
+        }
+        mostrarMensagemValida();
+    </script>
+</body>
+</html>
